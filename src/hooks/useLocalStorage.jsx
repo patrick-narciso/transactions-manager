@@ -20,5 +20,5 @@ export default (key, initialValue) => {
     }
   };
 
-  return { storedValue, setValue };
+  return [storedValue, setValue];
 };
