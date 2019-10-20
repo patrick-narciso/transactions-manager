@@ -6,12 +6,16 @@ import { createTransaction, increaseBalance, decreaseBalance } from 'redux/modul
 
 const Form = () => {
   const dispatch = useDispatch();
-  const { transactions } = useSelector(state => state.transactions);
+  const { transactions, balance } = useSelector(state => state.transactions);
   const [inputs, setInputs] = useState({ description: '', value: '', type: 'credit' });
   const [isFormValid, setIsFormValid] = useState(false);
-  const { setValue } = useLocalStorage('transactions', []);
+  const [, setTransactions] = useLocalStorage('transactions', []);
+  const [, setBalance] = useLocalStorage('balance', 0);
 
-  useEffect(() => setValue(transactions));
+  useEffect(() => {
+    setTransactions(transactions);
+    setBalance(balance);
+  });
 
   const handleValidation = () => {
     if (!inputs.description || !inputs.value) {
