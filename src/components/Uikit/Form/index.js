@@ -36,7 +36,7 @@ const Form = () => {
   };
 
   return (
-    <form>
+    <form id="form">
       <div className="a-input" style={{ marginBottom: '15px' }}>
         <input
           id="description"
@@ -93,6 +93,7 @@ const Form = () => {
         <span className="a-radio__shape" />
       </div>
       <button
+        id="buttonTransaction"
         style={{ width: '100%' }}
         disabled={!isFormValid}
         onClick={e => handleSubmit(e)}

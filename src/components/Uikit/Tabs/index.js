@@ -9,7 +9,9 @@ const Tabs = ({ tab1Title, tab2Title, tab1Content, tab2Content }) => {
         <span className="a-tabs__text">Cadastro</span>
       </label>
       <div className="a-tabs__content">
-        <h2 className="a-title--small">{tab1Title}</h2>
+        <h2 id="tab1Title" className="a-title--small">
+          {tab1Title}
+        </h2>
         {tab1Content}
       </div>
       <input className="a-tabs__item" type="radio" id="tab22" name="tabs2" />
@@ -18,7 +20,9 @@ const Tabs = ({ tab1Title, tab2Title, tab1Content, tab2Content }) => {
         <span className="a-tabs__text">Transações</span>
       </label>
       <div className="a-tabs__content">
-        <h2 className="a-title--medium">{tab2Title}</h2>
+        <h2 id="tab2Title" className="a-title--medium">
+          {tab2Title}
+        </h2>
         {tab2Content}
       </div>
       <div className="a-tabs__border" />
