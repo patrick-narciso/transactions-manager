@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import useLocalStorage from 'hooks/useLocalStorage';
 import { currencyToFloat } from 'utils/form';
 import { createTransaction, increaseBalance, decreaseBalance } from 'redux/modules/transactions';
 
 const Form = () => {
   const dispatch = useDispatch();
+  const { transactions } = useSelector(state => state.transactions);
   const [inputs, setInputs] = useState({ description: '', value: '', type: 'credit' });
   const [isFormValid, setIsFormValid] = useState(false);
+  const { setValue } = useLocalStorage('transactions', []);
+
+  useEffect(() => setValue(transactions));
 
   const handleValidation = () => {
     if (!inputs.description || !inputs.value) {
