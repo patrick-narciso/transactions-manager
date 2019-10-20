@@ -4,6 +4,7 @@ import './styles.css';
 
 const Table = () => {
   const { transactions } = useSelector(state => state.transactions);
+  const sortedTransactions = transactions.sort((a, b) => b.date - a.date);
 
   return (
     <table>
@@ -16,11 +17,11 @@ const Table = () => {
       </thead>
       <tbody>
         {transactions.length > 0 &&
-          transactions.map(transaction => (
+          sortedTransactions.map(transaction => (
             <tr>
               <td className="a-text--small">{transaction.description}</td>
               <td className="a-text--small">{transaction.value}</td>
-              <td className="a-text--small">50</td>
+              <td className="a-text--small">{new Date(transaction.date).toLocaleString()}</td>
             </tr>
           ))}
       </tbody>

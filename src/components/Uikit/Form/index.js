@@ -26,7 +26,7 @@ const Form = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const transaction = Object.assign({}, inputs);
+    const transaction = Object.assign({ date: Date.now() }, inputs);
     transaction.value = currencyToFloat(transaction.value);
     dispatch(createTransaction(transaction));
     if (transaction.type === 'credit') {
