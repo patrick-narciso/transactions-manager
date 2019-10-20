@@ -17,6 +17,7 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "release-it": "^12.4.3",
     "text-mask-addons": "^3.8.0",
     "vanilla-text-mask": "^5.1.1"
   },
@@ -26,6 +27,8 @@
     "test:coverage": "react-scripts test --coverage",
     "test:watch": "react-scripts test --watchAll",
     "test": "react-scripts test --watchAll=false",
+    "release": "release-it",
+    "lint": "eslint ./src --fix",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
