@@ -5,6 +5,7 @@
   "dependencies": {
     "@magnetis/astro": "^3.0.0",
     "axios": "^0.19.0",
+    "classnames": "^2.2.6",
     "history": "^4.9.0",
     "pre-commit": "^1.2.2",
     "prop-types": "^15.7.2",
@@ -15,7 +16,9 @@
     "react-scripts": "3.1.1",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "text-mask-addons": "^3.8.0",
+    "vanilla-text-mask": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
