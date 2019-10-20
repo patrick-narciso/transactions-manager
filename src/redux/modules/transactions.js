@@ -26,8 +26,8 @@ export const decreaseBalance = transactionValue => ({
 // Initial State
 
 const initialState = {
-  transactions: [],
-  balance: 0,
+  transactions: JSON.parse(window.localStorage.getItem('transactions')) || [],
+  balance: JSON.parse(window.localStorage.getItem('balance')) || 0,
 };
 
 // Reducer
