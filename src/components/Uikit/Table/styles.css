@@ -14,3 +14,19 @@ td {
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
+.value--negative {
+  color: red !important;
+}
+
+.value--positive {
+  color: green !important;
+}
+
+.icon--negative {
+  background-color: red !important;
+}
+
+.icon--positive {
+  background-color: green !important;
+}
